@@ -1,0 +1,9 @@
+form div {
+    background-color: #333a44;
+}
+form input {
+    flex: 1;
+    background-color: transparent;
+    border:  none;
+    outline: none;
+}

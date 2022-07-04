@@ -1,0 +1,59 @@
+ul {
+    list-style: none;
+}
+.myTodoList .todo-title {
+    flex: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.myTodoList .todo-title:hover {
+    color: rgb(255, 255, 255, .5);
+}
+.myTodoList i {
+    cursor: pointer;
+}
+.myTodoList .checkbox-container {
+    position: relative;
+}
+.myTodoList .checkbox-container input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    cursor: pointer;
+}
+.myTodoList .checkbox-container .custom-checkbox {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #333a44;
+    position: relative;
+}
+.myTodoList .checkbox-container .custom-checkbox::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255, .5);
+    border-radius: 0.2rem;
+    display: none;
+}
+.myTodoList .checkbox-container input:checked ~ .custom-checkbox::before {
+    display: block;
+}
+.myTodoList svg {
+    transition: 0.5s;
+}
+.myTodoList svg:hover {
+    transform: scale(1.2);
+}
+.myTodoList svg path {
+    fill:rgb(255, 255, 255, .5)!important;
+    cursor: pointer;
+}
